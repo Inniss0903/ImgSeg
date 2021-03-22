@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def kmeans_seg(k, input_path):
+def kmeans_seg(k, input_path: str):
+    name = input_path.split("/")[-1].split(".")[0]
     img = cv2.imread(input_path, cv2.IMREAD_COLOR)
     # 变换图像通道bgr->rgb
     b, g, r = cv2.split(img)
@@ -25,7 +26,7 @@ def kmeans_seg(k, input_path):
     # 显示结果
     img_output = labels.reshape((img.shape[0], img.shape[1]))
     # img_output = res.reshape((img.shape))
-    plt.imsave("Result/kmeans.jpg", img_output)
+    plt.imsave("Result/{}_km{}.jpg".format(name, k), img_output)
     plt.subplot(121), plt.imshow(img), plt.title('input')
     plt.xticks([])
     plt.yticks([])

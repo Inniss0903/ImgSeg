@@ -1,16 +1,16 @@
-from experiment import second_layer_t
+from experiment import second_layer_t, first_layer_k
 from seg.GrabCut import grab_cut
 from seg.SLIC import SLICProcessor
 from seg.kmeans import kmeans_seg
 
 if __name__ == '__main__':
-    input_path = "/Users/gem/PyProject/SE_image_seg/data/islet.jpg"
+    input_path = "/Users/gem/PyProject/SE_image_seg/data/mountain.jpg"
 
-    kmeans_seg(2, input_path)
+    # kmeans_seg(5, input_path)
     # grab_cut(input_path)
 
     # p = SLICProcessor('/Users/gem/PyProject/SE_image_seg/data/fruits.jpg', 200, 40)
     # p.iterate_10times()
 
     # second_layer_t()
-
+    first_layer_k('2dse')

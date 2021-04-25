@@ -21,16 +21,16 @@ def kmeans_seg(k, input_path: str):
     # 聚类,这里k=2
     compactness, labels, centers = cv2.kmeans(img_flat, k, None, criteria, 10, flags)
 
-    # centers = np.uint8(centers)
-    # res = centers[labels.flatten()]
+    centers = np.uint8(centers)
+    res = centers[labels.flatten()]
     # 显示结果
-    img_output = labels.reshape((img.shape[0], img.shape[1]))
-    # img_output = res.reshape((img.shape))
+    # img_output = labels.reshape((img.shape[0], img.shape[1]))
+    img_output = res.reshape((img.shape))
     plt.imsave("Result/{}_km{}.jpg".format(name, k), img_output)
     plt.subplot(121), plt.imshow(img), plt.title('input')
     plt.xticks([])
     plt.yticks([])
-    plt.subplot(122), plt.imshow(img_output), plt.title('kmeans')
+    plt.subplot(122), plt.imshow(img_output), plt.title('kmeans k={}'.format(k))
     plt.xticks([])
     plt.yticks([])
     plt.show()

@@ -14,3 +14,9 @@ def first_layer_k(y='1dse'):
     sns.lineplot(x='k', y=y, data=data)
     # sns.lineplot(x='k', y='2dse', data=data)
     plt.show()
+
+
+def second_layer(path, x='k', y='1dse'):
+    data = pd.read_csv(path)
+    sns.lineplot(x=x, y=y, data=data)
+    plt.show()

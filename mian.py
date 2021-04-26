@@ -1,4 +1,4 @@
-from experiment import second_layer_t, first_layer_k
+from experiment import second_layer_t, first_layer_k, second_layer
 from seg.GrabCut import grab_cut
 from seg.SLIC import SLICProcessor
 from seg.kmeans import kmeans_seg
@@ -13,4 +13,5 @@ if __name__ == '__main__':
     # p.iterate_10times()
 
     # second_layer_t()
-    first_layer_k('2dse')
+    # first_layer_k('2dse')
+    second_layer("experiment/horse/h1k.csv", 'k', '2dse')

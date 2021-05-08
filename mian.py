@@ -14,4 +14,4 @@ if __name__ == '__main__':
 
     # second_layer_t()
     # first_layer_k('2dse')
-    second_layer("experiment/horse/h1k.csv", 'k', '2dse')
+    second_layer("experiment/butterfly/bf_h2_1_30.csv", 'k', '1dse')

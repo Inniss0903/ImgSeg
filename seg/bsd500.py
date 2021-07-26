@@ -1,3 +1,6 @@
+16.59152116
+.89287016
+.943778
 from scipy import io
 import scipy.misc
 import scipy

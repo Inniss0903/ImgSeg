@@ -1,6 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
+import math
 
 
 def kmeans_seg(k, input_path: str):
@@ -27,10 +28,10 @@ def kmeans_seg(k, input_path: str):
     # img_output = labels.reshape((img.shape[0], img.shape[1]))
     img_output = res.reshape((img.shape))
     plt.imsave("Result/{}_km{}.jpg".format(name, k), img_output)
-    plt.subplot(121), plt.imshow(img), plt.title('input')
-    plt.xticks([])
-    plt.yticks([])
-    plt.subplot(122), plt.imshow(img_output), plt.title('kmeans k={}'.format(k))
-    plt.xticks([])
-    plt.yticks([])
-    plt.show()
+    # plt.subplot(121), plt.imshow(img), plt.title('input')
+    # plt.xticks([])
+    # plt.yticks([])
+    # plt.subplot(122), plt.imshow(img_output), plt.title('kmeans k={}'.format(k))
+    # plt.xticks([])
+    # plt.yticks([])
+    # plt.show()

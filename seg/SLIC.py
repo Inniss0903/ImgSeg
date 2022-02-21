@@ -163,7 +163,7 @@ class SLICProcessor(object):
 
 
 if __name__ == '__main__':
-    p = SLICProcessor('/Users/gem/PyProject/SE_image_seg/data/fruits.jpg', 200, 40)
+    p = SLICProcessor('/Users/gem/PyProject/SE_image_seg/data/rboat.jpg', 300, 40)
     p.iterate_10times()
     # p = SLICProcessor('Lenna.png', 300, 40)
     # p.iterate_10times()

@@ -22,6 +22,9 @@ def dux_1l():
     for i in range(len(x) - 1):
         du.append((y.get(i + 1) - y.get(i)) / (x.get(i + 1) - x.get
         (i)))
+    du.append(0.001)
+    plt.plot(x, du)
+    plt.show()
     print(du)
 
 

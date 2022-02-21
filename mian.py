@@ -43,5 +43,5 @@ if __name__ == '__main__':
     # plt.show()
     # dis1()
 
-    # seg.seg_csv("/Users/gem/Documents/CV/segmap/val", "segmap9/val/", pt='9')
+    seg.seg_csv("/Users/gem/Documents/CV/segmap/test", "segmap1_rgb/test/", pt='0')
     # seg.rm_endl("segmap1/test/2018.csv")
